@@ -1,5 +1,5 @@
 <?php
-$archivo = fopen("test.txt", "a+");
+$archivo = fopen("text.txt", "a+");
 $text = $_GET["texto"];
 echo $text;
 fwrite($archivo, $text);
