@@ -9,11 +9,11 @@ echo "done";
  */
 $sock = socket_create_listen(12345);
 socket_getsockname($sock, $addr, $port);
-echo $port;
-
+echo "listening on $addr:$port";
+/*
 $c = socket_accept($sock);
 socket_getpeername($c, $raddr, $rport);
 print "Received connection from $raddr:$rport\n";
-
+ */
 socket_close($sock);
 ?>
