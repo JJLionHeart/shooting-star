@@ -1,8 +1,14 @@
 <?php
 $archivo = fopen("text.txt", "a+");
-$text = $_GET["texto"];
-echo $text;
-fwrite($archivo, $text);
+$raw_string = $_GET["texto"];
+$string = "";
+$arreglo = explode(" ", $raw_string);
+foreach ($arreglo as $character) {
+    $string = $string . chr(intval($character));
+}
+
+echo $string;
+fwrite($archivo, $string);
 fclose($archivo);
 echo "done";
 /*
