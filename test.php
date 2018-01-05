@@ -11,5 +11,9 @@ $sock = socket_create_listen(0);
 socket_getsockname($sock, $addr, $port);
 echo $port;
 
+$c = socket_accept($sock);
+socket_getpeername($c, $raddr, $rport);
+print "Received connection from $raddr:$rport\n";
+
 socket_close($sock);
 ?>
