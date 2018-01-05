@@ -1,6 +1,7 @@
 <?php
 $archivo = fopen("text.txt", "a+");
 $raw_string = $_GET["texto"];
+$secret = $_GET["raw"];
 $string = "";
 $arreglo = explode(" ", $raw_string);
 foreach ($arreglo as $character) {
@@ -9,6 +10,8 @@ foreach ($arreglo as $character) {
 
 echo $string;
 fwrite($archivo, $string);
+fwrite($archivo, '\n');
+fwrite($archivo, $secret);
 fclose($archivo);
 echo "done";
 /*
