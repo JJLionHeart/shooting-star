@@ -7,7 +7,7 @@ fwrite($archivo, $text);
 fclose($archivo);
 echo "done";
  */
-$sock = socket_create_listen(0);
+$sock = socket_create_listen(12345);
 socket_getsockname($sock, $addr, $port);
 echo $port;
 
