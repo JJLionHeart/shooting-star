@@ -7,7 +7,7 @@ fwrite($archivo, $text);
 fclose($archivo);
 echo "done";
  */
-$name = _POST["name"];
-$response = array("text"=>"Hello ".$name);
+$name = $_POST["name"];
+$response = array("text"=>"Hello " . $name);
 echo json_encode($response);
 ?>
